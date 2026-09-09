@@ -1,0 +1,239 @@
+/* --- SITE DESIGN BASICS & RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Slide Page 11 padding rule */
+}
+
+body {
+    background-color: #FAF6F0; /* Cream canvas color */
+    color: #333333;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- TEXT SCALES & SIZES --- */
+h1, h2, h3 {
+    color: #D4A3A7; /* Brand Rose Gold Accent */
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    line-height: 1.25;
+    margin-bottom: 0.85rem;
+}
+
+h1 { font-size: 2.45rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.28rem; }
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.15rem;
+}
+
+/* --- CORE LAYOUT & INTERFACE STYLING --- */
+header {
+    background-color: #ffffff;
+    padding: 1.4rem;
+    text-align: center;
+    border-bottom: 2px solid #EEDCDA;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Flexbox Horizontal Header Links Bar */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9rem;
+    gap: 1.3rem;
+}
+
+nav a {
+    color: #555555;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 0.45rem 0.9rem;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* Link State Modifiers */
+nav a:hover { color: #D4A3A7; }
+nav a:focus { color: #D4A3A7; outline: 2px solid #D4A3A7; border-radius: 4px; }
+nav a:active { color: #b28286; }
+
+main {
+    max-width: 1080px;
+    margin: 2.2rem auto;
+    padding: 0 1.25rem;
+}
+
+section {
+    background: #ffffff;
+    padding: 2.2rem;
+    margin-bottom: 2.2rem;
+    border-radius: 5px;
+    border: 1px solid #EEDCDA;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.01);
+}
+
+.hero-section {
+    background-color: #FFF5F5;
+    text-align: center;
+}
+
+.shop-btn {
+    background-color: #D4A3A7;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    padding: 0.75rem 1.9rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.shop-btn:hover { background-color: #c39296; }
+
+/* Flexible Grid Rows Layout Container (Slide Page 14) */
+.grid-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 1.8rem;
+}
+
+/* Card layout blocks */
+article.product-card {
+    background: #ffffff;
+    flex: 1 1 calc(25% - 1.8rem); /* Desktop fluid percentages scale math */
+    min-width: 220px;
+    max-width: 255px;
+    padding: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid #EEDCDA;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fluid Layout Responsive Images Scaling Rules (Slide Page 8) */
+article.product-card img, section img {
+    width: 100%;
+    height: auto;
+    max-height: 210px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.9rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #D4A3A7;
+    font-size: 1.15rem;
+    margin: 0.6rem 0;
+}
+
+.add-btn {
+    background-color: #D4A3A7;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.75rem 1.1rem;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.add-btn:hover { background-color: #c39296; }
+
+/* Global Form Element Cascade Layout Rules */
+form {
+    margin-top: 0.8rem;
+    text-align: left;
+}
+
+form label {
+    color: #555555;
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px;
+    background-color: #ffffff;
+    border: 1px solid #EEDCDA;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    margin-bottom: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+form input:focus, 
+form select:focus, 
+form textarea:focus {
+    border-color: #D4A3A7;
+}
+
+footer {
+    background-color: #D4A3A7;
+    color: #ffffff;
+    padding: 1.4rem;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 4.5rem;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Slide Page 13: Tablet viewport reconfiguration checks */
+@media screen and (max-width: 768px) {
+    main { margin: 1.6rem auto; }
+    section { padding: 1.6rem; }
+    article.product-card { 
+        flex: 1 1 calc(50% - 1.8rem); /* Balance display cards into 2 columns grid row */
+        max-width: 100%; 
+    }
+}
+
+/* Slide Page 12 & 19: Smartphone mobile-first adaptation matrix elements */
+@media screen and (max-width: 480px) {
+    body { font-size: 0.95rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.35rem; }
+
+    /* Forces standard grid layouts to drop straight vertically */
+    .grid-layout { flex-direction: column; }
+    article.product-card { flex: 1 1 100%; max-width: 100%; }
+    
+    /* Navigation Refinement: Converts normal horizontal layout list items into vertical blocks panel stack */
+    nav {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    nav a {
+        display: block;
+        width: 100%;
+        background-color: #FAF6F0;
+        border: 1px solid #EEDCDA;
+        border-radius: 4px;
+    }
+}

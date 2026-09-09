@@ -1,40 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic site setup and character mapping -->
     <meta charset="UTF-8">
-    <title>About - Wildflower & Wax</title>
+    
+    <!--Slide Page 10: Viewport configuration to fix scale and zoom shifts on smartphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Us - Wildflower & Wax</title>
+    
+    <!-- Pulling in our shared global styling sheet file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+    <!-- Main brand header and top navigation link matrix -->
     <header>
+        <h2>Wildflower & Wax</h2>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="products.html">Shop</a> | 
-            <a href="about.html">About</a> | 
-            <a href="enquiry.html">Enquiry</a> | 
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
+    <!-- Content framework container wrapping all about page paragraphs -->
     <main>
-        <h1>About Wildflower & Wax</h1>
-        <p>Founded in 2024 as a small home-based candle making workshop crafting eco-friendly home fragrances.</p>
         
-        <h2>Our Mission</h2>
-        <p>To bring sustainable nature-inspired luxury and relaxation into every home.</p>
+        <!-- Section layout blocking out the brand background backstory -->
+        <section>
+            <h1>About Wildflower & Wax</h1>
+            <p>Founded in 2024 as a small home-based candle making workshop crafting eco-friendly home fragrances. Our signature creations bring fresh, natural energy and structural minimal design directly into your home space.</p>
+        </section>
 
-        <h2>Our Vision</h2>
-        <p>To become a leading nationwide provider of non-toxic botanical wellness products.</p>
+        <!-- Dynamic flex row grid system tracking our core objectives -->
+        <section>
+            <h2>Our Core Values</h2>
+            <div class="grid-layout">
+                
+                <!-- Left item column focusing on brand mission statement parameters -->
+                <article class="product-card" style="text-align: left; max-width: 100%;">
+                    <h3>Our Mission</h3>
+                    <p>To bring sustainable nature-inspired luxury and relaxation into every home.</p>
+                </article>
+                
+                <!-- Right item column focusing on brand vision criteria tracking -->
+                <article class="product-card" style="text-align: left; max-width: 100%;">
+                    <h3>Our Vision</h3>
+                    <p>To become a leading nationwide provider of non-toxic botanical wellness products.</p>
+                </article>
+                
+            </div>
+        </section>
 
-        <h2>Our Team</h2>
-        <ul>
-            <li><strong>Shalom Dutuma</strong> - Founder & Lead Artisan</li>
-            <li><strong>Tinevimbo S.</strong> - Studio Assistant</li>
-        </ul>
+        <!-- Final structural listing separating team management roles -->
+        <section>
+            <h2>Our Team</h2>
+            <ul style="margin-left: 20px; color: #555555; line-height: 2;">
+                <li><strong>Shalom Dutuma</strong> - Founder & Lead Artisan</li>
+                <li><strong>Tinevimbo S.</strong> - Studio Assistant</li>
+            </ul>
+        </section>
+        
     </main>
 
+    <!-- Standard site footer tracking corporate details and timestamps -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax</p>
+        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
     </footer>
 
 </body>

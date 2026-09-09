@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character setup mapping configuration -->
     <meta charset="UTF-8">
-    <title>Contact - Wildflower & Wax</title>
+    
+    <!-- Slide Page 10: Viewport configuration to fix layout zoom shifts on smartphones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Us - Wildflower & Wax</title>
+    
+    <!-- Linking our master design stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+    <!-- Main site branding title and navigation menu navigation bar -->
     <header>
+        <h2>Wildflower & Wax</h2>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="products.html">Shop</a> | 
-            <a href="about.html">About</a> | 
-            <a href="enquiry.html">Enquiry</a> | 
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
+    <!-- Content layout wrapper dividing screen boxes cleanly -->
     <main>
-        <h1>Contact Us</h1>
-        <p>Email: hello@wildflowerandwax.co.za</p>
-        <p>Phone: 082 123 4567</p>
+        <section>
+            <h1>Contact Us</h1>
+            
+            <!-- Using the grid matrix framework to split forms and company details -->
+            <div class="grid-layout" style="align-items: flex-start;">
+                
+                <!-- Column content section managing address metadata parameters -->
+                <article class="product-card" style="text-align: left; max-width: 100%; background-color: #FFF5F5;">
+                    <h3>Our Details</h3>
+                    <p><strong>Email:</strong> hello@wildflowerandwax.co.za</p>
+                    <p><strong>Phone:</strong> 082 123 4567</p>
+                    
+                    <h3>Our Locations</h3>
+                    <p><strong>1. Pretoria East Studio</strong><br>124 Cassia Avenue, Lynnwood, Pretoria</p>
+                    <p><strong>2. Hazel Food Market Stall</strong><br>64 Queens Crescent, Lynnwood Green, Pretoria</p>
+                    
+                    <!-- Proportional product card feature image graphic node -->
+                    <img src="Images/Neon Wave Ribbon.jpg" alt="Neon Wave Ribbon product display card" style="width: 100%; border-radius: 4px; height: 150px; object-fit: cover;">
+                </article>
 
-        <h2>Our Locations</h2>
-        <p><strong>1. Pretoria East Studio</strong><br>124 Cassia Avenue, Lynnwood, Pretoria</p>
-        <p><strong>2. Hazel Food Market Stall</strong><br>64 Queens Crescent, Lynnwood Green, Pretoria</p>
+                <!-- Column content section managing customer mail data inputs -->
+                <article class="product-card" style="text-align: left; max-width: 100%;">
+                    <h3>Send a Message</h3>
+                    <form action="enquiry.html">
+                        
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                        
+                        <label>Your Email</label>
+                        <input type="email" placeholder="Your Email" required>
+                        
+                        <label>Message</label>
+                        <textarea placeholder="Message" rows="4" required></textarea>
+                        
+                        <button type="submit" class="add-btn">SEND MESSAGE</button>
+                    </form>
+                </article>
 
-        <h2>Send a Message</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required><br><br>
-            <input type="email" placeholder="Your Email" required><br><br>
-            <textarea placeholder="Message" rows="4" required></textarea><br><br>
-            <button type="submit">Send</button>
-        </form>
+            </div>
+        </section>
     </main>
 
+    <!-- Global layout base footer copyright fields -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax</p>
+        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
     </footer>
 
 </body>

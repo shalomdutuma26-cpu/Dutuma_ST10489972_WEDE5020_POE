@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic browser head setup and character rules configuration -->
     <meta charset="UTF-8">
+    
+    <!--Slide Page 10: Viewport meta setup ensuring correct fluid scaling layouts on phone screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Home - Wildflower & Wax</title>
+    
+    <!-- Link entry pulling in our central cascading stylesheet file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+    <!-- Upper page branding area and desktop responsive navigation links -->
     <header>
+        <h2>Wildflower & Wax</h2>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="products.html">Shop</a> | 
-            <a href="about.html">About</a> | 
-            <a href="enquiry.html">Enquiry</a> | 
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
+    <!-- Core page framework containing the main content sections -->
     <main>
     
-        <section>
-            <img src="Images\Citrus Grove Elements.jpg" alt="Wildflower and Wax Hero Banner" width="800">
-            <h1>Wildflower & Wax</h1>
-            <p>Handmade artisanal candles crafted in Pretoria.</p>
-            <a href="products.html">Shop Collection</a>
+        <!-- Brand spotlight landing block mapping the customized background banner asset -->
+        <section class="hero-section" style="border-radius: 6px; border: 1px solid #EEDCDA; margin-bottom: 2rem; overflow: hidden; padding: 0;">
+            <img src="images/Wildflower Hero Banner.png" alt="Aesthetic minimal background banner holding organic wax textures" style="width: 100%; max-height: 350px; object-fit: cover; display: block;">
+            
+            <div style="padding: 2.5rem 1.5rem; background: #ffffff; border-top: 1px solid #EEDCDA; text-align: center;">
+                <h1>Wildflower & Wax</h1>
+                <p style="color: #555555; max-width: 600px; margin: 0 auto 1.5rem auto;">Handmade artisanal candles crafted locally in Pretoria, South Africa. Experience our luxury soy wax formulations, clean-burning natural cotton botanical wicks, and architectural minimalist pillar candle sculptures designed to elevate your living space.</p>
+                <a href="products.html" class="shop-btn">SHOP COLLECTION</a>
+            </div>
         </section>
+
+        <!-- Informational layout split grouping brand features into flexible sub-sections -->
+        <section>
+            <h2>Why Choose Our Brand</h2>
+            <div class="grid-layout">
+                
+                <!-- Left grid item mapping eco manufacturing parameters -->
+                <article class="product-card" style="text-align: left; max-width: 100%;">
+                    <h3>100% Eco-Friendly</h3>
+                    <p style="font-size: 0.95rem; margin: 0; color: #555555;">We carefully hand-pour pure soy wax alternatives infused with lead-free cotton wicks. This ensures a clean, slow, non-toxic household burn environment that is entirely safe for your family and pets.</p>
+                </article>
+
+                <!-- Right grid item mapping sculptural design criteria -->
+                <article class="product-card" style="text-align: left; max-width: 100%;">
+                    <h3>Sculpted Shapes</h3>
+                    <p style="font-size: 0.95rem; margin: 0; color: #555555;">Our architectural pillar statements are hand-crafted locally to double as elegant interior centerpieces. Each item serves as an artistic design accent even when unlit.</p>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
+    <!-- Global layout base footer holding generic site copyright data -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax</p>
+        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
     </footer>
 
 </body>

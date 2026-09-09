@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic browser character and layout settings -->
     <meta charset="UTF-8">
-    <title>Shop - Wildflower & Wax</title>
+    
+    <!--Slide Page 10: Viewport configuration to fix layout zoom shifts on phone screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Shop Candles - Wildflower & Wax</title>
+    
+    <!-- Linking our master central design template stylesheet file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+    <!-- Unified brand banner header component containing navigation bars links -->
     <header>
+        <h2>Wildflower & Wax</h2>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="products.html">Shop</a> | 
-            <a href="about.html">About</a> | 
-            <a href="enquiry.html">Enquiry</a> | 
+            <a href="index.html">Home</a>
+            <a href="products.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="enquiry.html">Enquiry</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
+    <!-- Main e-commerce content section managing storefront stock inventories -->
     <main>
-        <h1>Our Candles</h1>
-        
-        <select><option>Scent Filter</option></select>
-        <select><option>Wax Filter</option></select>
-        
-        <ul>
-            <li>
-                <img src="IMAGES\Blushing Rose Sculpture.jpg" alt="Rose Candle" width="150">
-                <h3>Blushing Rose Sculpture</h3>
-                <p>R250.00</p>
-            </li>
-            <li>
-                <img src="IMAGES\Citrus Grove Elements.jpg" alt="Citrus Candle" width="150">
-                <h3>Citrus Grove Elements</h3>
-                <p>R250.00</p>
-            </li>
-            <li>
-                <img src="IMAGES\Muted Rose Pillar Trio.jpg" alt="Pillar Candles" width="150">
-                <h3>Muted Rose Pillar Trio</h3>
-                <p>R250.00</p>
-            </li>
-            <li>
-                <img src="IMAGES\Neon Wave Ribbon.jpg" alt="Wave Candle" width="150">
-                <h3>Neon Wave Ribbon</h3>
-                <p>R250.00</p>
-            </li>
-        </ul>
+        <section>
+            <h1>Our Candles</h1>
+            <p style="color: #666666; margin-bottom: 1.5rem;">Explore our premium, hand-poured candle collections, natural botanical scents, and architectural pillar statement pieces.</p>
+            
+            <!-- Filter box tags enabling collection category sorting options parameters -->
+            <div style="text-align: left; margin-bottom: 2rem;">
+                <select><option>Filter by Scent (Floral, Citrus, Berry)</option></select>
+                <select><option>Filter by Wax Type (Soy, Beeswax)</option></select>
+            </div>
+
+            <!-- Slide Page 14: Fluid flexbox grid container holding our product cards rows -->
+            <div class="grid-layout">
+                
+                <!-- Product item card module detailing stock line variant 1 -->
+                <article class="product-card">
+                    <img src="images/Blushing Rose Sculpture.jpg" alt="Blushing Rose Sculpture Candle">
+                    <h3>Blushing Rose Sculpture</h3>
+                    <div class="price">R250.00</div>
+                    <button class="add-btn" onclick="alert('Added to cart!');">Add to Cart</button>
+                </article>
+
+                <!-- Product item card module detailing stock line variant 2 -->
+                <article class="product-card">
+                    <img src="images/Citrus Grove Elements.jpg" alt="Citrus Grove Elements Candle">
+                    <h3>Citrus Grove Elements</h3>
+                    <div class="price">R250.00</div>
+                    <button class="add-btn" onclick="alert('Added to cart!');">Add to Cart</button>
+                </article>
+
+                <!-- Product item card module detailing stock line variant 3 -->
+                <article class="product-card">
+                    <img src="images/Muted Rose Pillar Trio.jpg" alt="Muted Rose Pillar Trio Candles">
+                    <h3>Muted Rose Pillar Trio</h3>
+                    <div class="price">R250.00</div>
+                    <button class="add-btn" onclick="alert('Added to cart!');">Add to Cart</button>
+                </article>
+
+                <!-- Product item card module detailing stock line variant 4 -->
+                <article class="product-card">
+                    <img src="images/Neon Wave Ribbon.jpg" alt="Neon Wave Ribbon Candle">
+                    <h3>Neon Wave Ribbon</h3>
+                    <div class="price">R250.00</div>
+                    <button class="add-btn" onclick="alert('Added to cart!');">Add to Cart</button>
+                </article>
+
+            </div>
+        </section>
     </main>
 
+    <!-- Global layout base footer holding corporate fields -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax</p>
+        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
     </footer>
 
 </body>
