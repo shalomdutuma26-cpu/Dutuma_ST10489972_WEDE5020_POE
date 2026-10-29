@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic site setup and character mapping -->
+    <!-- Core HTML meta setup framework values settings declarations checking -->
     <meta charset="UTF-8">
-    
-    <!--Slide Page 10: Viewport configuration to fix scale and zoom shifts on smartphones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>About Us - Wildflower & Wax</title>
-    
-    <!-- Pulling in our shared global styling sheet file -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Our Story & Core Values | About Wildflower & Wax</title>
+    <meta name="description" content="Learn about Wildflower & Wax, an eco-friendly candle workshop founded in 2024. Read about our sustainable mission, vision, and local artisanal team in Pretoria.">
+    <meta name="keywords" content="about wildflower and wax, sustainable candle makers, non-toxic wellness products, candle artisans Pretoria, team Shalom Dutuma">
+
+    <!-- Linking our design structure directly into our global cascading style blocks sheet -->
+    <link rel="stylesheet" type="text/css" href="css\style.css">
 </head>
 <body>
 
-    <!-- Main brand header and top navigation link matrix -->
-    <header>
-        <h2>Wildflower & Wax</h2>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        HANDMADE WITH LOVE IN PRETORIA | DISCOVER OUR CANDLE COLLECTION
+    </div>
+
+    <!-- Master Header Component -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Left: Currency Selector -->
+            <div class="header-left">
+                <span>ZA · ZAR</span>
+            </div>
+
+            <!-- Center: Brand Logo -->
+            <a href="index.html" class="logo-link">
+                <span class="brand-name">Wildflower &amp; Wax</span>
+            </a>
+
+            <!-- Right: Icons (Search, Contact, Cart) -->
+            <div class="header-icons">
+                <button id="searchToggle" aria-label="Search our candle collection" title="Search">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <circle cx="10.5" cy="10.5" r="6.5"/>
+                        <path d="m16 16 5 5"/>
+                    </svg>
+                </button>
+
+                <a href="contact.html" aria-label="Contact us" title="Contact">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m3 7 9 6 9-6"/>
+                    </svg>
+                </a>
+
+                <a href="cart.html" class="cart-link" aria-label="View shopping cart" title="Cart">
+                    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path d="M5 8h14l1 12H4L5 8Z"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Links Underneath -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">HOME</a>
+            <a href="products.html">SHOP</a>
+            <a href="about.html" aria-current="page">ABOUT</a>
+            <a href="enquiry.html">ENQUIRY</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </header>
 
-    <!-- Content framework container wrapping all about page paragraphs -->
-    <main>
+    <!-- Main Workspace Content -->
+    <main class="main-container" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
         
-        <!-- Section layout blocking out the brand background backstory -->
-        <section>
-            <h1>About Wildflower & Wax</h1>
-            <p>Founded in 2024 as a small home-based candle making workshop crafting eco-friendly home fragrances. Our signature creations bring fresh, natural energy and structural minimal design directly into your home space.</p>
+        <!-- Background timeline overview sub-section card layers framework text blocks -->
+        <section style="margin-bottom: 50px; text-align: center;">
+            <h1 style="font-family: 'Georgia', serif; font-size: 2.2rem; color: #222; margin-bottom: 15px;">About Wildflower & Wax</h1>
+            <p style="color: #555555; line-height: 1.6; max-width: 750px; margin: 0 auto; font-size: 1.05rem;">Founded in 2024 as a small home-based candle making workshop crafting eco-friendly home fragrances. Our signature creations bring fresh, natural energy and structural minimal design directly into your home space.</p>
         </section>
 
-        <!-- Dynamic flex row grid system tracking our core objectives -->
-        <section>
-            <h2>Our Core Values</h2>
-            <div class="grid-layout">
+        <!-- Sub-sections wrapping core values inside our responsive flex column grid modules row -->
+        <section style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 25px; text-align: center;">Our Core Values</h2>
+            <div class="grid-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 
-                <!-- Left item column focusing on brand mission statement parameters -->
-                <article class="product-card" style="text-align: left; max-width: 100%;">
-                    <h3>Our Mission</h3>
-                    <p>To bring sustainable nature-inspired luxury and relaxation into every home.</p>
+                <!-- Left column card block detailing mission statement metadata parameters features -->
+                <article class="product-card" style="text-align: left; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <h3 style="color: #333; margin-bottom: 10px; font-size: 1.2rem;">Our Mission</h3>
+                    <p style="color: #555555; line-height: 1.5; font-size: 0.95rem;">To bring sustainable nature-inspired luxury and relaxation into every home using pure ingredients.</p>
                 </article>
                 
-                <!-- Right item column focusing on brand vision criteria tracking -->
-                <article class="product-card" style="text-align: left; max-width: 100%;">
-                    <h3>Our Vision</h3>
-                    <p>To become a leading nationwide provider of non-toxic botanical wellness products.</p>
+                <!-- Right column card block detailing vision statement metadata parameters features -->
+                <article class="product-card" style="text-align: left; background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <h3 style="color: #333; margin-bottom: 10px; font-size: 1.2rem;">Our Vision</h3>
+                    <p style="color: #555555; line-height: 1.5; font-size: 0.95rem;">To become a leading nationwide provider of non-toxic botanical wellness and luxury design accent products.</p>
                 </article>
                 
             </div>
         </section>
 
-        <!-- Final structural listing separating team management roles -->
-        <section>
-            <h2>Our Team</h2>
-            <ul style="margin-left: 20px; color: #555555; line-height: 2;">
+        <!-- Final section listing structural corporate team roles details entries profiles -->
+        <section style="margin-bottom: 60px; background: #faf6f6; padding: 35px; border-radius: 8px; border: 1px solid #f0e6e6;">
+            <h2 style="font-family: 'Georgia', serif; font-size: 1.8rem; color: #222; margin-bottom: 20px;">Our Team</h2>
+            <ul style="list-style-type: none; padding: 0; color: #555555; line-height: 2.2;">
                 <li><strong>Shalom Dutuma</strong> - Founder & Lead Artisan</li>
                 <li><strong>Tinevimbo S.</strong> - Studio Assistant</li>
             </ul>
@@ -66,10 +108,43 @@
         
     </main>
 
-    <!-- Standard site footer tracking corporate details and timestamps -->
+    <!-- Matrix Layout Footer tracking Quick Links and Social Interaction Buttons -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Wildflower & Wax</h3>
+                <p>Artisanal, clean-burning interior candle enhancements hand-poured locally in Pretoria, South Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enquiry.html">Product Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Email: info@wildflowerandwax.co.za</p>
+                <p>Location: Pretoria, South Africa</p>
+            </div>
+            <div class="footer-col">
+    <h4>Follow Us</h4>
+    <div style="display: flex; gap: 12px; margin-top: 10px;">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest">Pinterest</a>
+    </div>
+</div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <!-- Connecting master code file right before closing body tag -->
+    <script src="js\Script.js"></script>
 </body>
 </html>

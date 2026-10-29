@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Wildflower & Wax</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        HANDMADE WITH LOVE IN PRETORIA | DISCOVER OUR CANDLE COLLECTION
+    </div>
+
+    <!-- Master Header Component -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="header-left">
+                <span>ZA · ZAR</span>
+            </div>
+            <a href="index.html" class="logo-link">
+                <span class="brand-name">Wildflower &amp; Wax</span>
+            </a>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-link" aria-label="View shopping cart" title="Cart">
+                    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path d="M5 8h14l1 12H4L5 8Z"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html">HOME</a>
+            <a href="products.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="enquiry.html">ENQUIRY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Main Cart Content Workspace -->
+    <main class="main-container">
+        <div class="contact-section">
+            <h1>Your Shopping Cart</h1>
+            <p class="subtitle">Review your selected luxury candles before checkout.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <div id="cartItemsContainer">
+                <!-- JavaScript will populate cart items here -->
+            </div>
+
+            <div id="cartTotalContainer" style="margin-top: 25px; border-top: 2px solid #eee; padding-top: 20px; text-align: right; display: none;">
+                <h3 id="cartTotalText" style="font-family: 'Georgia', serif; font-size: 1.3rem; color: #222;">Total: R0.00</h3>
+                <button onclick="clearCart()" style="background: #333; color: #fff; border: none; padding: 10px 20px; margin-top: 15px; border-radius: 4px; cursor: pointer;">Clear Cart</button>
+                <button type="button" onclick="window.location.href='checkout.html'" class="submit-btn" style="margin-top: 10px; width: auto; display: inline-block;">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Component -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Wildflower & Wax</h3>
+                <p>Handcrafted artisanal candles created locally in Pretoria, South Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enquiry.html">Product Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Email: hello@wildflowerandwax.co.za</p>
+                <p>Location: Pretoria, South Africa</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(localStorage.getItem("wildflower_cart")) || [];
+            const container = document.getElementById("cartItemsContainer");
+            const totalContainer = document.getElementById("cartTotalContainer");
+            const totalText = document.getElementById("cartTotalText");
+            const badge = document.querySelector(".cart-count");
+
+            // Calculate total badge count
+            let totalItemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            if (badge) badge.textContent = totalItemsCount;
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p style="text-align: center; color: #666; padding: 20px;">Your cart is currently empty. <a href="products.html" style="color: #d89292; text-decoration: underline;">Browse our collection</a></p>`;
+                totalContainer.style.display = "none";
+            } else {
+                let html = '<ul style="list-style: none; padding: 0;">';
+                let grandTotal = 0;
+
+                cart.forEach((item, index) => {
+                    let itemTotal = item.price * item.quantity;
+                    grandTotal += itemTotal;
+
+                    html += `
+                        <li style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f2f2f2;">
+                            <div>
+                                <span style="font-weight: 600; color: #222; font-size: 1rem;">${item.name}</span>
+                                <div style="font-size: 0.85rem; color: #666; margin-top: 6px; display: flex; align-items: center; gap: 10px;">
+                                    <span>R${item.price}.00 each</span>
+                                    <span>|</span>
+                                    <!-- Quantity Controls (+ and - buttons) -->
+                                    <div style="display: flex; align-items: center; border: 1px solid #ccc; border-radius: 4px; overflow: hidden; background: #fff;">
+                                        <button onclick="decreaseQty(${index})" style="background: #f7f7f7; border: none; padding: 2px 8px; cursor: pointer; font-weight: bold; color: #333;">-</button>
+                                        <span style="padding: 0 10px; font-weight: 600; color: #222;">${item.quantity}</span>
+                                        <button onclick="increaseQty(${index})" style="background: #f7f7f7; border: none; padding: 2px 8px; cursor: pointer; font-weight: bold; color: #333;">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 20px;">
+                                <span style="font-weight: bold; color: #333; font-size: 1.05rem;">R${itemTotal}.00</span>
+                                <button onclick="removeItem(${index})" style="background: none; border: none; color: #b42318; cursor: pointer; font-size: 0.85rem; font-weight: 500;">Remove</button>
+                            </div>
+                        </li>
+                    `;
+                });
+
+                html += '</ul>';
+                container.innerHTML = html;
+                totalText.textContent = `Total: R${grandTotal}.00`;
+                totalContainer.style.display = "block";
+            }
+        });
+
+        // Increase Quantity Function
+        window.increaseQty = function(index) {
+            let cart = JSON.parse(localStorage.getItem("wildflower_cart")) || [];
+            cart[index].quantity += 1;
+            localStorage.setItem("wildflower_cart", JSON.stringify(cart));
+            location.reload();
+        };
+
+        // Decrease Quantity Function (removes item completely if it drops to 0)
+        window.decreaseQty = function(index) {
+            let cart = JSON.parse(localStorage.getItem("wildflower_cart")) || [];
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            } else {
+                cart.splice(index, 1);
+            }
+            localStorage.setItem("wildflower_cart", JSON.stringify(cart));
+            location.reload();
+        };
+
+        window.removeItem = function(index) {
+            let cart = JSON.parse(localStorage.getItem("wildflower_cart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("wildflower_cart", JSON.stringify(cart));
+            location.reload();
+        };
+
+        window.clearCart = function() {
+            localStorage.removeItem("wildflower_cart");
+            location.reload();
+        };
+    </script>
+</body>
+</html>

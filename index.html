@@ -1,71 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Basic browser head setup and character rules configuration -->
+    <!-- WEDE5020 POE PART 3: SEO and responsive design -->
     <meta charset="UTF-8">
-    
-    <!--Slide Page 10: Viewport meta setup ensuring correct fluid scaling layouts on phone screens -->
+
+    <!-- Week 7: Responsive website viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Home - Wildflower & Wax</title>
-    
-    <!-- Link entry pulling in our central cascading stylesheet file -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Part 3: Search Engine Optimisation -->
+    <title>Handmade Soy Candles in Pretoria | Wildflower & Wax</title>
+    <meta name="description" content="Discover handmade soy wax candles and elegant sculptural candles by Wildflower & Wax in Pretoria, South Africa. Explore our candle collection.">
+    <meta name="keywords" content="handmade candles, soy wax candles, Pretoria candles, sculptural candles, Wildflower and Wax">
+    <meta name="author" content="Wildflower & Wax">
+
+    <!-- Main CSS stylesheet -->
+    <link rel="stylesheet" href="css\style.css">
 </head>
+
 <body>
 
-    <!-- Upper page branding area and desktop responsive navigation links -->
-    <header>
-        <h2>Wildflower & Wax</h2>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="products.html">Shop</a>
-            <a href="about.html">About</a>
-            <a href="enquiry.html">Enquiry</a>
-            <a href="contact.html">Contact</a>
+    <!-- ==========================================
+         WILDFLOWER & WAX
+         PART 3 - PINK LUXURY HEADER
+    ========================================== -->
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        HANDMADE WITH LOVE IN PRETORIA | DISCOVER OUR CANDLE COLLECTION
+    </div>
+
+    <!-- Master Header Component -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Left: Currency Selector -->
+            <div class="header-left">
+                <span>ZA · ZAR</span>
+            </div>
+
+            <!-- Center: Brand Logo -->
+            <a href="index.html" class="logo-link">
+                <span class="brand-name">Wildflower &amp; Wax</span>
+            </a>
+
+            <!-- Right: Icons (Search, Contact, Cart) -->
+            <div class="header-icons">
+                <button id="searchToggle" aria-label="Search our candle collection" title="Search">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <circle cx="10.5" cy="10.5" r="6.5"/>
+                        <path d="m16 16 5 5"/>
+                    </svg>
+                </button>
+
+                <a href="contact.html" aria-label="Contact us" title="Contact">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                        <path d="m3 7 9 6 9-6"/>
+                    </svg>
+                </a>
+
+                <a href="cart.html" class="cart-link" aria-label="View shopping cart" title="Cart">
+                    <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                        <path d="M5 8h14l1 12H4L5 8Z"/>
+                        <path d="M9 9V6a3 3 0 0 1 6 0v3"/>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Links Underneath -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">HOME</a>
+            <a href="products.html">SHOP</a>
+            <a href="about.html">ABOUT</a>
+            <a href="enquiry.html">ENQUIRY</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </header>
 
-    <!-- Core page framework containing the main content sections -->
+    <!-- PART 3: INTERACTIVE CANDLE SEARCH DROPDOWN -->
+    <div id="searchPanel" class="search-panel" hidden>
+        <form id="siteSearchForm" action="products.html" method="get" role="search">
+            <label for="siteSearchInput">
+                Search our candle collection
+            </label>
+            <div class="search-field">
+                <input type="search" id="siteSearchInput" name="search" placeholder="Search for your favourite candle..." required>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- =====================================
+         MAIN WEBSITE CONTENT
+    ====================================== -->
     <main>
-    
-        <!-- Brand spotlight landing block mapping the customized background banner asset -->
-        <section class="hero-section" style="border-radius: 6px; border: 1px solid #EEDCDA; margin-bottom: 2rem; overflow: hidden; padding: 0;">
-            <img src="images/Wildflower Hero Banner.png" alt="Aesthetic minimal background banner holding organic wax textures" style="width: 100%; max-height: 350px; object-fit: cover; display: block;">
-            
-            <div style="padding: 2.5rem 1.5rem; background: #ffffff; border-top: 1px solid #EEDCDA; text-align: center;">
+       
+        <!-- HOMEPAGE HERO BANNER -->
+        <section class="hero-section">
+            <img src="Images/Wildflower Hero Banner.png" alt="Handmade luxury candles by Wildflower and Wax" class="hero-image">
+            <div class="hero-overlay">
                 <h1>Wildflower & Wax</h1>
-                <p style="color: #555555; max-width: 600px; margin: 0 auto 1.5rem auto;">Handmade artisanal candles crafted locally in Pretoria, South Africa. Experience our luxury soy wax formulations, clean-burning natural cotton botanical wicks, and architectural minimalist pillar candle sculptures designed to elevate your living space.</p>
-                <a href="products.html" class="shop-btn">SHOP COLLECTION</a>
+                <p>
+                    Handmade artisanal candles crafted locally in
+                    Pretoria, South Africa. Discover our luxury
+                    soy wax candles and beautifully sculpted
+                    designs made to elevate your living space.
+                </p>
+                <a href="products.html" class="shop-btn">
+                    SHOP COLLECTION
+                </a>
             </div>
         </section>
 
-        <!-- Informational layout split grouping brand features into flexible sub-sections -->
-        <section>
-            <h2>Why Choose Our Brand</h2>
-            <div class="grid-layout">
-                
-                <!-- Left grid item mapping eco manufacturing parameters -->
-                <article class="product-card" style="text-align: left; max-width: 100%;">
-                    <h3>100% Eco-Friendly</h3>
-                    <p style="font-size: 0.95rem; margin: 0; color: #555555;">We carefully hand-pour pure soy wax alternatives infused with lead-free cotton wicks. This ensures a clean, slow, non-toxic household burn environment that is entirely safe for your family and pets.</p>
-                </article>
-
-                <!-- Right grid item mapping sculptural design criteria -->
-                <article class="product-card" style="text-align: left; max-width: 100%;">
-                    <h3>Sculpted Shapes</h3>
-                    <p style="font-size: 0.95rem; margin: 0; color: #555555;">Our architectural pillar statements are hand-crafted locally to double as elegant interior centerpieces. Each item serves as an artistic design accent even when unlit.</p>
-                </article>
-
+        <!-- HOMEPAGE FEATURED HIGHLIGHTS SECTION -->
+        <section style="max-width: 1200px; margin: 60px auto; padding: 0 20px; text-align: center;">
+            <h2 style="font-family: 'Georgia', serif; font-size: 2.2rem; margin-bottom: 10px; color: #222;">Artisanal Excellence</h2>
+            <p style="color: #666; max-width: 650px; margin: 0 auto 40px auto; line-height: 1.6;">
+                Every candle in our Pretoria studio is poured in small batches using 100% natural botanical soy wax, ensuring clean burns and lasting natural fragrances.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; text-align: left;">
+                <div style="background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #333;">🌱 100% Soy Wax</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Sustainably sourced plant-based wax that burns cleaner and longer than traditional paraffin blends.</p>
+                </div>
+                <div style="background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #333;">✨ Hand-Sculpted</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Unique architectural pillar designs crafted to serve as modern statement decor pieces in any home.</p>
+                </div>
+                <div style="background: #fff; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: #333;">🇿🇦 Made in Pretoria</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">Locally inspired botanical fragrances hand-poured with love in the heart of Pretoria East.</p>
+                </div>
             </div>
+        </section>
+
+        <!-- =====================================
+             PART 3: INTERACTIVE FAQ (Native Accordion)
+        ====================================== -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <p>Find answers to some common questions about our handmade candles.</p>
+
+            <details class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 15px 0;">
+                <summary style="cursor: pointer; font-size: 1.05rem; font-weight: 500; color: #222; display: flex; justify-content: space-between; align-items: center; list-style: none; outline: none;">
+                    <span>What are your candles made from?</span>
+                    <span style="font-size: 1.4rem; color: #999; font-weight: normal;">+</span>
+                </summary>
+                <div style="padding: 12px 0 5px 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
+                    <p>Our candles are handcrafted using 100% natural soy wax and lead-free cotton wicks.</p>
+                </div>
+            </details>
+
+            <details class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 15px 0;">
+                <summary style="cursor: pointer; font-size: 1.05rem; font-weight: 500; color: #222; display: flex; justify-content: space-between; align-items: center; list-style: none; outline: none;">
+                    <span>Where is Wildflower & Wax located?</span>
+                    <span style="font-size: 1.4rem; color: #999; font-weight: normal;">+</span>
+                </summary>
+                <div style="padding: 12px 0 5px 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
+                    <p>Wildflower & Wax is based in Pretoria East, South Africa, with local studio pickups available.</p>
+                </div>
+            </details>
+
+            <details class="faq-item" style="border-bottom: 1px solid #eaeaea; padding: 15px 0;">
+                <summary style="cursor: pointer; font-size: 1.05rem; font-weight: 500; color: #222; display: flex; justify-content: space-between; align-items: center; list-style: none; outline: none;">
+                    <span>How can I enquire about a candle?</span>
+                    <span style="font-size: 1.4rem; color: #999; font-weight: normal;">+</span>
+                </summary>
+                <div style="padding: 12px 0 5px 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
+                    <p>Visit our <a href="enquiry.html" style="color: #d89292; text-decoration: underline;">Enquiry Page</a> to ask about custom orders or bulk pricing.</p>
+                </div>
+            </details>
         </section>
 
     </main>
 
-    <!-- Global layout base footer holding generic site copyright data -->
+    <!-- Global Footer Component with Quick Links -->
     <footer>
-        <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Wildflower & Wax</h3>
+                <p>Handcrafted artisanal candles created locally in Pretoria, South Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop Collection</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enquiry.html">Product Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>Email: hello@wildflowerandwax.co.za</p>
+                <p>Location: Pretoria, South Africa</p>
+
+        </div>
+        <div class="footer-col">
+    <h4>Follow Us</h4>
+    <div style="display: flex; gap: 12px; margin-top: 10px;">
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+        <a href="https://pinterest.com" target="_blank" aria-label="Pinterest">Pinterest</a>
+    </div>
+</div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wildflower & Wax. All Rights Reserved.</p>
+        </div>
     </footer>
 
+    <!-- Master Script Connection -->
+    <script src="js\Script.js"></script>
 </body>
 </html>
