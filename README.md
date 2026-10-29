@@ -18,8 +18,7 @@ Wildflower & Wax is an organic, home-based artisanal candle and wellness studio 
 ## Deployment & Hosting
 - **Deployment Target:** GitHub Pages
 - **Live Site URL:** `https://<your-github-username>.github.io/<your-repo-name>/`
-- **Repository URL:** `https://github.com<your-github-username>/<your-repo-name>`
-
+- **Repository URL:** `https://github.com/shalomdutuma26-cpu/Dutuma_ST10489972_WEDE5020_POE`
 ## Key Features & Enhancements
 
 ### 1. Interactive Functionality (JavaScript)
@@ -58,14 +57,18 @@ Wildflower & Wax is an organic, home-based artisanal candle and wellness studio 
 ```
 
 ## Step-by-Step Project Timeline & Milestones
-- **Phase 1: Concepts & Layout Planning (Week 1 / Days 1–3)**
-  - Outlined brand goals, calculated targets, defined audience personas, and wireframed layouts.
-- **Phase 2: Semantic HTML Construction (Week 2 / Days 4–7)**
-  - Built the initial 5 HTML template pages using semantic tags and established file structures.
-- **Phase 3: CSS Styling & Mobile Responsiveness (Week 3 / Days 8–11)**
-  - Created central css/style.css stylesheet and set up responsive media queries (768px and 480px breakpoints).
-- **Phase 4: Advanced Functionality, SEO & Deployment (Week 4 / Days 12–14)**
-  - Implemented modular JavaScript features, form validation algorithms, technical SEO assets (robots.txt, sitemap.xml), and deployed the final application live to GitHub Pages.
+
+### Phase 1: Concepts & Layout Planning (Week 1 / Days 1–3)
+- Outlined brand goals, calculated targets, defined audience personas, and wireframed layouts.
+
+### Phase 2: Semantic HTML Construction (Week 2 / Days 4–7)
+- Built the initial 5 HTML template pages using semantic tags and established file structures.
+
+### Phase 3: CSS Styling & Mobile Responsiveness (Week 3 / Days 8–11)
+- Created central css/style.css stylesheet and set up responsive media queries (768px and 480px breakpoints).
+
+### Phase 4: Advanced Functionality, SEO & Deployment (Week 4 / Days 12–14)
+- Implemented modular JavaScript features, form validation algorithms, technical SEO assets (robots.txt, sitemap.xml), and deployed the final application live to GitHub Pages.
 
 ## Log of Changes (Changelog)
 
@@ -78,6 +81,7 @@ Wildflower & Wax is an organic, home-based artisanal candle and wellness studio 
 - **Off-Page Integration:** Expanded footer column components with active social media channels.
 
 #### Changed & Fixed
+- **Hero Banner Redesign:** Updated the home page hero banner with custom imagery and brand messaging to clearly communicate what the Wildflower & Wax business is about at first glance.
 - **JavaScript Unification:** Consolidated disparate JS logic into a clean, unified js/Script.js file.
 - **Form Validation Enhancements:** Upgraded input checks for enquiry.html, contact.html, and checkout.html with real-time error messages.
 - **Performance & Security:** Configured deferred script execution, optimized media sizes, and enabled HTTPS via GitHub Pages.
@@ -100,7 +104,8 @@ Wildflower & Wax is an organic, home-based artisanal candle and wellness studio 
 - Created core HTML templates (index.html, products.html, about.html, enquiry.html, contact.html).
 
 ## Academic References Matrix
-- MDN Web Docs. 2026. Client-side form validation. [Online]. Available at: https://mozilla.org [Accessed: October 2026].
+- MDN Web Docs. 2026. Client-side form validation. [Online]. Available at: https://developer.mozilla.org [Accessed: October 2026].
 - Pinterest. 2026. Artisanal candle aesthetic and packaging layout references. [Online]. Available at: https://pinterest.com [Accessed: 31 August 2026].
 - The Independent Institute of Education (Pty) Ltd. 2026. Web Development (Introduction) WEDE5020 Portfolio of Evidence Instructions. Sandton: The Independent Institute of Education.
 - Wix. 2026. Ecom natural candle boutique (earthy template) style guide mapping. [Online]. Available at: https://wix.com [Accessed: 31 August 2026].
+
