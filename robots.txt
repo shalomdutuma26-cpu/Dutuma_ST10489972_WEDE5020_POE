@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://<your-github-username>.github.io/<your-repo-name>/sitemap.xml
+Sitemap: https://shalomdutuma26-cpu.github.io/Dutuma_ST10489972_WEDE5020_POE/sitemap.xml
