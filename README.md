@@ -17,7 +17,7 @@ Wildflower & Wax is an organic, home-based artisanal candle and wellness studio 
 
 ## Deployment & Hosting
 - **Deployment Target:** GitHub Pages
-- **Live Site URL:** `https://<your-github-username>.github.io/<your-repo-name>/`
+- **Live Site URL:**  https://shalomdutuma26-cpu.github.io/Dutuma_ST10489972_WEDE5020_POE/
 - **Repository URL:** https://github.com/shalomdutuma26-cpu/Dutuma_ST10489972_WEDE5020_POE/tree/part-3
 ## Key Features & Enhancements
 
